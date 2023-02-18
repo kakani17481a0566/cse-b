@@ -1,0 +1,134 @@
+/* Body */
+body {
+	/* background-color: #f5f5f5; */
+	text-align: left;
+	font-family: Arial, sans-serif;
+	background: #BE93C5;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #7BC6CC, #BE93C5);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+/* Header */
+h1 {
+
+	font-size: 48px;
+	text-align: center;
+	margin-top: 50px;
+	color: #d2691e;
+	text-shadow: 3px 3px #a0522d;
+}
+
+/* Table */
+table {
+	border-collapse: collapse;
+	margin: 50px auto;
+	box-shadow: 5px 5px 15px #888888;
+}
+
+th,
+td {
+	padding: 10px;
+	font-weight: bold;
+	text-align: left;
+}
+
+th {
+	background-color: #d2691e;
+	color: white;
+	font-weight: bold;
+	background: #41295a;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2F0743, #41295a);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	font-size: 24px;
+}
+
+td {
+	font-size: 20px;
+}
+
+tr:nth-child(even) {
+	/* background-color: #f2f2f2; */
+	color: white;
+	font-weight: bold;
+	background: #41295a;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #2F0743, #41295a);
+	/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #2F0743, #41295a);
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Sortable Columns */
+.sortable {
+	cursor: pointer;
+}
+
+.sort-asc:after {
+	content: "\2191";
+}
+
+.sort-desc:after {
+	content: "\2193";
+}
+
+/* Images */
+/* img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 2px 2px #888888;
+} */
+
+img {
+	display: block;
+	width: 3.5cm;
+	height: 4.5cm;
+	object-fit: cover;
+	object-position: center;
+	margin: auto;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 8px;
+	background-color: #fff;
+	margin-left: 10px;
+	box-shadow: none;
+	font-size: 20px;
+	outline: none;
+	transition: border-color 0.2s ease-in-out;
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+	border-color: #3b99fc;
+}
+
+
+.dataTables_wrapper .dataTables_length,
+.dataTables_wrapper .dataTables_filter,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_processing,
+.dataTables_wrapper .dataTables_paginate {
+  color: #333;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color:whitesmoke; /* change to your desired color */
+}
