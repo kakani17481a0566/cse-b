@@ -34,7 +34,7 @@
   
       function logout() {
         // Redirect the user to the login page
-        window.location.href = "login.html";
+        window.location.href = "index.html";
       }
   
       $(document).ready(function () {
@@ -48,7 +48,9 @@
   </head>
   <body>
     <h1>CSE-B 2017-2021</h1>
-    <button onclick="logout()">Logout</button>
+   
+    <button onclick="logout()" class="logout-button">Log Out</button>
+
     <table id="student-table">
       <thead>
         <tr>

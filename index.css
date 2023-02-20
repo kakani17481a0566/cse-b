@@ -168,3 +168,22 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: #45a049;
 }
+
+.logout-button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #FF0099;
+	color: #fff;
+	font-size: 16px;
+	border-radius: 5px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+	background-color: #CC0033;
+  }
+  
