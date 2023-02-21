@@ -32,21 +32,24 @@
 </head>
 
 <body>
-	<h1>Login Page</h1>
-	<form>
-		<label for="username">Username:</label>
-		<input type="text" id="username" name="username"><br>
+	<div>
 
-		<label for="password">Password:</label>
-		<input type="password" id="password" name="password">
+		<form>
+			<h1 style=" color: BLACK">CSE-B</h1>
+			<label style=" color: white" for="username">Username:</label>
+			<input style=" color: white" type="text" id="username" name="username"><br>
 
-		<br>
-		<button type="button" id="password-visibility-button" onclick="togglePasswordVisibility()"
-			style="background-color: #333; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show
-			password</button>
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password">
 
-		<input type="button" value="Submit" onclick="validate()">
-	</form>
+			<br>
+			<button type="button" id="password-visibility-button" onclick="togglePasswordVisibility()"
+				style="background-color: #333; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show
+				password</button>
+
+			<input type="button" value="Submit" onclick="validate()">
+		</form>
+	</div>
 </body>
 
 </html>
