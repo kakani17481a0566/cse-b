@@ -1,46 +1,52 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Login Page</title>
-    <link rel="stylesheet" type="text/css" href="login.css" />
-    <script type="text/javascript">
-        function togglePasswordVisibility() {
-            var passwordInput = document.getElementById("password");
-            var passwordVisibilityButton = document.getElementById("password-visibility-button");
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="login.css" />
+	<script type="text/javascript">
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("password");
+			var passwordVisibilityButton = document.getElementById("password-visibility-button");
 
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                passwordVisibilityButton.textContent = "Hide password";
-            } else {
-                passwordInput.type = "password";
-                passwordVisibilityButton.textContent = "Show password";
-            }
-        }
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				passwordVisibilityButton.textContent = "Hide password";
+			} else {
+				passwordInput.type = "password";
+				passwordVisibilityButton.textContent = "Show password";
+			}
+		}
 
-        function validate() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
+		function validate() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
 
-            if (username === "CSEB" && password === "17481A05") {
-                window.location.href = "DOB.html";
-            } else {
-                alert("Invalid Login Credentials");
-            }
-        }
-    </script>
+			if (username === "CSEB" && password === "17481A05") {
+				window.location.href = "DOB.html";
+			} else {
+				alert("Invalid Login Credentials");
+			}
+		}
+	</script>
 </head>
-<body>
-    <h1>Login Page</h1>
-    <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username"><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
-       
-        <br>
-		<button type="button" id="password-visibility-button" onclick="togglePasswordVisibility()">Show password</button>
-        <input type="button" value="Submit" onclick="validate()">
-    </form>
+<body>
+	<h1>Login Page</h1>
+	<form>
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username"><br>
+
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+
+		<br>
+		<button type="button" id="password-visibility-button" onclick="togglePasswordVisibility()"
+			style="background-color: #333; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Show
+			password</button>
+
+		<input type="button" value="Submit" onclick="validate()">
+	</form>
 </body>
+
 </html>
