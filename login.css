@@ -55,4 +55,23 @@
   input[type="button"]:hover {
     background-color: #555;
   }
+  #password-visibility-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #password-visibility-button:hover {
+    background-color: #f5f5f5;
+    color: black;
+  }
+  
+  #password-visibility-button:active {
+    background-color: #ebebeb;
+    color: BLACK;
+  }
+  
   
