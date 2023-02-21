@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>CSE-B-2017-2021</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
-    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="index.css" />
-    <!-- <script>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CSE-B-2017-2021</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css" />
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <!-- <script>
       $(document).ready(function () {
       $("#student-table").DataTable()
        .style("border-collapse", "collapse")
@@ -15,662 +16,664 @@
        .style("text-align", "center");
       });
       </script> -->
-    <script>
-      $(document).ready(function () {
-        $("#student-table").DataTable();
-      });
-    </script>
-    <script>
-      // Set a timeout variable to store the timeout ID
-      var timeoutID;
-  
-      function resetTimer() {
-        // Clear the existing timeout
-        clearTimeout(timeoutID);
-  
-        // Start a new timeout for 3 minutes
-        timeoutID = setTimeout(logout, 1 * 60 * 1000); // 3 minutes = 3 * 60 seconds * 1000 milliseconds
-      }
-  
-      function logout() {
-        // Redirect the user to the login page
-        window.location.href = "index.html";
-      }
-  
-      $(document).ready(function () {
-        // Reset the timer when the user interacts with the page
-        $(document).on("mousemove keydown click", resetTimer);
-  
-        // Start the initial timer
-        resetTimer();
-      });
-    </script>
-  </head>
-  <body>
-    <h1>CSE-B 2017-2021</h1>
-   
-  
-    <button onclick="logout()"style="display: inline-block;
-               padding: 10px 20px;
-               background-color: #FF0099;
-               color: #fff;
-               font-size: 16px;
-               border-radius: 5px;
-               text-decoration: none;
-               text-transform: uppercase;
-               font-weight: bold;
-               cursor: pointer;
-               transition: background-color 0.3s ease;"
-        onmouseover="this.style.backgroundColor='#CC0033';"
-        onmouseout="this.style.backgroundColor='#FF0099';">  Log Out</button>
+  <script>
+    $(document).ready(function () {
+      $("#student-table").DataTable();
+    });
+  </script>
+  <script>
+    // Set a timeout variable to store the timeout ID
+    var timeoutID;
 
-    <table id="student-table">
-      <thead>
-        <tr>
-          <th class="sortable">S.NO</th>
-          <th class="sortable">Image</th>
-          <th class="sortable">Name</th>
-          <th class="sortable">Roll Number</th>
-          <th class="sortable">DOB</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730392/CSE-B/cse/1_nfukl9.jpg"
-              alt="Student Image" />
-          </td>
-          <td>GUNJI VAMSI KRISHNA</td>
-          <td>17481A0556</td>
-          <td>14/07/2000</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/2_p8xdv5.jpg"
-              alt="Student Image" />
-          </td>
-          <td>SRAVYA GUNTAKANI</td>
-          <td>17481A0557</td>
-          <td>13/11/1999</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676733135/CSE-B/58_qqrphq.jpg"
-              alt="Student Image" />
-          </td>
-          <td>GOPI KRISHNA GUNTURU</td>
-          <td>17481A0558</td>
-          <td>06/05/2000</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676733135/CSE-B/59_kvghul.jpg"
-              alt="Student Image" />
-          </td>
-          <td>HASEENA NOORI</td>
-          <td>17481A0559</td>
-          <td>02/09/1999</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/5_db9ktm.jpg"
-              alt="Student Image" />
-          </td>
-          <td>MAHESH BABU JAGARLAMUDI</td>
-          <td>17481A0560</td>
-          <td>21/10/1999</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/6_tgv1z4.jpg"
-              alt="Student Image" />
-          </td>
-          <td>JYOTHSNA NAVYASRI JAGATHAPURAO
-          </td>
-          <td>17481A0561</td>
-          <td>04/06/1999</td>
-        </tr>
-        <tr>
-          <td>7</td>
-          <td>
-            <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/7_kmkxfa.jpg"
-              alt="Student Image" />
-          </td>
-          <td>SOWMYA JALLURI
-          </td>
-          <td>17481A0562</td>
-          <td>13/09/2000</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730392/CSE-B/cse/8_bqvpqg.jpg"
-            alt="Student Image"></td>
-          <td>JONNALAGADDA MADHU SUDHANA RAO </td>
-          <td>17481A0563</td>
-          <td>31/10/1999</td>
-        </tr>
-        <tr>
-          <td>9</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730510/CSE-B/cse/c_hrpuxm.jpg"
-            alt="Student Image"></td>
-          <td>JUJJURI CHANDRASEKHARACHARI
-          </td>
-          <td>17481A0564</td>
-          <td>18/12/1999</td>
-        </tr>
-        <tr>
-          <td>10</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676739148/CSE-B/cse/10_ahodgd.jpg"
-            alt="Student Image"></td>
-          <td>JUVVANAPUDI NAVA PRAHARSHA
-          </td>
-          <td>17481A0565</td>
-          <td>07/08/2000</td>
-        </tr>
-        <tr>
-          <td>11</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676739237/CSE-B/cse/11_a6vfve.jpg"
-            alt="Student Image"></td>
-          <td>KAKANI MOHITH KRISHNA SAI
-          </td>
-          <td>17481A0566</td>
-          <td>20/06/1999</td>
-        </tr>
-        <tr>
-          <td>12</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730608/CSE-B/cse/12_csej3x.jpg"
-            alt="Student Image"></td>
-          <td>PRAGNA KAKANI
-          </td>
-          <td>17481A0567</td>
-          <td>02/12/1999</td>
-        </tr>
-        <tr>
-          <td>13</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730825/CSE-B/cse/13_yvvg93.jpg"
-            alt="Student Image"></td>
-          <td>SAI PRIYA KALAKOTA
-          </td>
-          <td>17481A0568</td>
-          <td>15/06/2000</td>
-        </tr>
-        <tr>
-          <td>14</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731114/CSE-B/cse/14_raed8u.jpg"
-            alt="Student Image"></td>
-          <td>KALATHOTI SUVARNA DIVYA SHEELA
-          </td>
-          <td>17481A0569</td>
-          <td>10/11/1999</td>
-        </tr>
-        <tr>
-          <td>15</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731293/CSE-B/cse/15_bxijup.jpg"
-            alt="Student Image"></td>
-          <td>KALLEPALLI MANOGNA </td>
-          <td>17481A0570</td>
-          <td>05/07/2000</td>
-        </tr>
-        <tr>
-          <td>16</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731417/CSE-B/cse/16_vh9ejb.jpg"
-            alt="Student Image"></td>
-          <td>THRINADH KALVA
-          </td>
-          <td>17481A0571</td>
-          <td>26/01/1999</td>
-        </tr>
-        <tr>
-          <td>17</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731648/CSE-B/cse/17_jb0c42.jpg"
-            alt="Student Image"></td>
-          <td>SUJAY KANAPARTHI
-          </td>
-          <td>17481A0572</td>
-          <td>20/05/1999</td>
-        </tr>
-        <tr>
-          <td>18</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731876/CSE-B/cse/18_eh6spq.jpg"
-            alt="Student Image"></td>
-          <td>JAI VENKAT KANCHARLA
-          </td>
-          <td>17481A0573</td>
-          <td>25/04/2000</td>
-        </tr>
-        <tr>
-          <td>19</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732025/CSE-B/cse/19_kxlon8.jpg"
-            alt="Student Image"></td>
-          <td>JSRAVANI DEVI KANDULA</td>
-          <td>17481A0574</td>
-          <td>11/10/1999</td>
-        </tr>
-        <tr>
-          <td>20</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732240/CSE-B/cse/20_ffazmc.jpg"
-            alt="Student Image"></td>
-          <td>VAMSI KRISHNA	KASINENI</td>
-          <td>17481A0575</td>
-          <td>23/08/2000</td>
-        </tr>
-        <tr>
-          <td>21</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732404/CSE-B/cse/21_i9exxg.jpg"
-            alt="Student Image"></td>
-          <td>HEMANTH	KATTA</td>
-          <td>17481A0576</td>
-          <td>05/07/2000</td>
-        </tr>
-        <tr>
-          <td>22</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732486/CSE-B/cse/22_zqqybs.jpg"
-            alt="Student Image"></td>
-          <td>NAGA RAJU  KATTA</td>
-          <td>17481A0577</td>
-          <td>10/10/2000</td>
-        </tr>
-        <tr>
-          <td>23</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732614/CSE-B/cse/23_nzmb9l.jpg"
-            alt="Student Image"></td>
-          <td>KATTUPALLI JESSY
-          </td>
-          <td>17481A0578</td>
-          <td>19/09/2000</td>
-        </tr>
-        <tr>
-          <td>24</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733138/CSE-B/79_eqy2ot.jpg"
-            alt="Student Image"></td>
-          <td>KHATEEJA</td>
-          <td>17481A0579</td>
-          <td>22/11/1999</td>
-        </tr>
-        <tr>
-          <td>25</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733138/CSE-B/80_cz77zr.jpg"
-            alt="Student Image"></td>
-          <td>LIKHITH	KODALI</td>
-          <td>17481A0580</td>
-          <td>31/05/2000</td>
-        </tr>
-        <tr>
-          <td>26</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733443/CSE-B/cse/26_u8mjm4.jpg"
-            alt="Student Image"></td>
-          <td>VIJAYABHARGAVI	KODALI</td>
-          <td>17481A0581</td>
-          <td>31/03/2000</td>
-        </tr>
-        <tr>
-          <td>27</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733607/CSE-B/cse/27_kanou5.jpg"
-            alt="Student Image"></td>
-          <td>KODE	SAI GAYATHRI</td>
-          <td>17481A0582</td>
-          <td>31/05/1999</td>
-        </tr>
-        <tr>
-          <td>28</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733765/CSE-B/cse/28_pbc5dn.jpg"
-            alt="Student Image"></td>
-          <td>KOKKILIGADDA MONIKA KEERTHANA	KEERTHANA</td>
-          <td>17481A0583</td>
-          <td>02/12/1999</td>
-        </tr>
-        <tr>
-          <td>29</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733896/CSE-B/cse/29_fa8dox.jpg"
-            alt="Student Image"></td>
-          <td>VENKATESH	KOLLA</td>
-          <td>17481A0584</td>
-          <td>12/03/1999</td>
-        </tr>
-        <tr>
-          <td>30</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734023/CSE-B/cse/30_kpfwbh.jpg"
-            alt="Student Image"></td>
-          <td>KOLLIPARA	DHYANESH</td>
-          <td>17481A0585</td>
-          <td>30/06/1999</td>
-        </tr>
-        <tr>
-          <td>31</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734128/CSE-B/cse/31_csiypt.jpg"
-            alt="Student Image"></td>
-          <td>KOLLIPARA JHANSI LAKSHMI	</td>
-          <td>17481A0586</td>
-          <td>27/11/1999</td>
-        </tr>
-        <tr>
-          <td>32</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734217/CSE-B/cse/32_hhquhm.jpg"
-            alt="Student Image"></td>
-          <td>KOLLU	KIRANMAYEE</td>
-          <td>17481A0587</td>
-          <td>13/06/1999</td>
-        </tr>
-        <tr>
-          <td>33</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734319/CSE-B/cse/33_lln78z.jpg"
-            alt="Student Image"></td>
-          <td>LAKSHMI SUPRAJA	KONAKANCHI
-          </td>
-          <td>17481A0588</td>
-          <td>24/06/2000</td>
-        </tr>
-        <tr>
-          <td>34</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734355/CSE-B/cse/34_vhof6i.jpg"
-            alt="Student Image"></td>
-          <td>ANJANEYA SAI PHANI	KONDAPALLI</td>
-          <td>17481A0589</td>
-          <td>16/11/1999</td>
-        </tr>
-        <tr>
-          <td>35</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734487/CSE-B/cse/35_qt8vfy.jpg"
-            alt="Student Image"></td>
-          <td>HARISH KUMAR	KONDAPALLI
-          </td>
-          <td>17481A0590</td>
-          <td>08/05/2000</td>
-        </tr>
-        <tr>
-          <td>36</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734687/CSE-B/cse/36_nuupjc.jpg"
-            alt="Student Image"></td>
-          <td>KONDAPALLI PAVAN	KUMAR        </td>
-          <td>17481A0591</td>
-          <td>03/03/1999</td>
-        </tr>
-        <tr>
-          <td>37</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734762/CSE-B/cse/37_xjapjt.jpg"
-            alt="Student Image"></td>
-          <td>TEJA PRAVEEN KUMAR	KONDAVEETI
-          </td>
-          <td>17481A0592</td>
-          <td>01/05/2000</td>
-        </tr>
-        <tr>
-          <td>38</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734874/CSE-B/cse/38_qn9h8s.jpg"
-            alt="Student Image"></td>
-          <td>ALEKHYA	KONDETI
-          </td>
-          <td>17481A0593</td>
-          <td>03/12/1999</td>
-        </tr>
-        <tr>
-          <td>39</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735026/CSE-B/cse/39_vmmwcd.jpg"
-            alt="Student Image"></td>
-          <td>KONDRATHI	SURESH
-          </td>
-          <td>17481A0594</td>
-          <td>06/09/1999</td>
-        </tr>
-        <tr>
-          <td>40</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735250/CSE-B/cse/40_kmy7wg.jpg"
-            alt="Student Image"></td>
-          <td>KOTA	RENCY
-          </td>
-          <td>17481A0595</td>
-          <td>23/10/1999</td>
-        </tr>
-        <tr>
-          <td>41</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735374/CSE-B/cse/41_bxyvkn.jpg"
-            alt="Student Image"></td>
-          <td>	KOTHA	USHANVITHA
-          </td>
-          <td>17481A0596</td>
-          <td>05/05/2000</td>
-        </tr>
-        <tr>
-          <td>42</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733141/CSE-B/97_kgdtbs.jpg"
-            alt="Student Image"></td>
-          <td>KOTHAGUNDU AMRUTHA REKHA KOTHAGUNDU
-          </td>
-          <td>17481A0597</td>
-          <td>29/10/1999</td>
-        </tr>
-        <tr>
-          <td>43</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735467/CSE-B/cse/43_kbbywp.png"
-            alt="Student Image"></td>
-          <td>KUCHIPUDI ANUSHA
-          </td>
-          <td>17481A0598</td>
-          <td>28/05/1999</td>
-        </tr>
-        <tr>
-          <td>44</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735646/CSE-B/cse/44_hhavdc.jpg"
-            alt="Student Image"></td>
-          <td>KUCHIPUDI SATYA BHAVANA
-          </td>
-          <td>17481A0599</td>
-          <td>20/07/2000</td>
-        </tr>
-        <tr>
-          <td>45</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735714/CSE-B/cse/45_rt6k7x.jpg"
-            alt="Student Image"></td>
-          <td>SRAVANI	KUMPATI
-          </td>
-          <td>17481A05A0</td>
-          <td>23/05/2000</td>
-        </tr>
-        <tr>
-          <td>46</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735949/CSE-B/cse/46_fyoy0c.jpg"
-            alt="Student Image"></td>
-          <td>VAMSIBABU	MADDALA
-          </td>
-          <td>17481A05A1</td>
-          <td>20/08/1998</td>
-        </tr>
-        <tr>
-          <td>47</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736051/CSE-B/cse/47_uffqal.jpg"
-            alt="Student Image"></td>
-          <td>PRATHIBHA	MADDU
-          </td>
-          <td>17481A05A2</td>
-          <td>20/03/2000</td>
-        </tr>
-        <tr>
-          <td>48</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736214/CSE-B/cse/48_x7mpea.jpg"
-            alt="Student Image"></td>
-          <td>MALLINENI PRIYANKA	MALLINENI
-          </td>
-          <td>17481A05A3</td>
-          <td>19/09/1999</td>
-        </tr>
-        <tr>
-          <td>49</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736413/CSE-B/cse/49_qjucuc.jpg"
-            alt="Student Image"></td>
-          <td>MANDAPATI	HEMA
-          </td>
-          <td>17481A05A4</td>
-          <td>31/10/1999</td>
-        </tr>
-        <tr>
-          <td>50</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733142/CSE-B/A5_qhlzir.jpg"
-            alt="Student Image"></td>
-          <td>MARNI THARUN	KISHORE
-          </td>
-          <td>17481A05A5</td>
-          <td>07/08/2000</td>
-        </tr>
-        <tr>
-          <td>51</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736617/CSE-B/cse/51_iu7xhm.jpg"
-            alt="Student Image"></td>
-          <td>MARRI BHUVANESWARI
-          </td>
-          <td>17481A05A6</td>
-          <td>23/04/1999</td>
-        </tr>
-        <tr>
-          <td>52</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736709/CSE-B/cse/52_xamt6h.jpg"
-            alt="Student Image"></td>
-          <td>MATLAPUDI JAYA ABHIGNA
-          </td>
-          <td>17481A05A7</td>
-          <td>23/05/2000</td>
-        </tr>
-        <tr>
-          <td>53</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736839/CSE-B/cse/53_hwiwru.jpg"
-            alt="Student Image"></td>
-          <td>MATTA	PRATHYUSHA
-          </td>
-          <td>17481A05A8</td>
-          <td>21/09/1999</td>
-        </tr>
-        <tr>
-          <td>54</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736943/CSE-B/cse/54_ziljrg.jpg"
-            alt="Student Image"></td>
-          <td>MAYA LEELAVATHI
-          </td>
-          <td>17481A05A9</td>
-          <td>05/08/1999</td>
-        </tr>
-        <tr>
-          <td>55</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737031/CSE-B/cse/55_s8eibl.jpg"
-            alt="Student Image"></td>
-          <td>MEDEPALLI	KAMAL JOSTNA
-          </td>
-          <td>17481A05B0</td>
-          <td>29/03/2000</td>
-        </tr>
-        <tr>
-          <td>56</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737216/CSE-B/cse/56_yrh14w.jpg"
-            alt="Student Image"></td>
-          <td>MEDIKONDA RAMYA	
-          </td>
-          <td>17481A05B1</td>
-          <td>03/01/2000</td>
-        </tr>
-        <tr>
-          <td>57</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737277/CSE-B/cse/57_wokoe4.jpg"
-            alt="Student Image"></td>
-          <td>MENDA ANUSHA		
-          </td>
-          <td>17481A05B2</td>
-          <td>14/10/1999</td>
-        </tr>
-        <tr>
-          <td>58</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737460/CSE-B/cse/58_vjumrc.jpg"
-            alt="Student Image"></td>
-          <td>SURYA	SHARMA		
-          </td>
-          <td>17481A05B3</td>
-          <td>01/07/2000</td>
-        </tr>
-        <tr>
-          <td>59</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737519/CSE-B/cse/59_feil8u.jpg"
-            alt="Student Image"></td>
-          <td>METHUKUMILLI	DALI NAGA SRI SAI		
-          </td>
-          <td>17481A05B4</td>
-          <td>18/02/2000</td>
-        </tr>
-        <tr>
-          <td>60</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738050/CSE-B/cse/60_l4k79t.jpg"
-            alt="Student Image"></td>
-          <td>SAKHAVATH ALI	MIRZA		
-          </td>
-          <td>17481A05B5</td>
-          <td>14/06/2000</td>
-        </tr>
-        <tr>
-          <td>61</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738141/CSE-B/cse/61_mjllaz.jpg"
-            alt="Student Image"></td>
-          <td>ASHA HAZRA	MOHAMMAD
-          </td>
-          <td>17481A05B6</td>
-          <td>31/03/2001</td>
-        </tr>
-        <tr>
-          <td>62</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733143/CSE-B/LE10_ose72i.jpg"
-            alt="Student Image"></td>
-          <td>AALLA ALEKHYA
-          </td>
-          <td>18485A0510        </td>
-          <td>11/03/2000</td>
-        </tr>
-        <tr>
-          <td>63</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738423/CSE-B/cse/63_ljgab3.jpg"
-            alt="Student Image"></td>
-          <td>CHANDANA	NAVEEN		
-          </td>
-          <td>18485A0511</td>
-          <td>27/12/1999</td>
-        </tr>
-        <tr>
-          <td>64</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738592/CSE-B/cse/64_i0edu2.jpg"
-            alt="Student Image"></td>
-          <td>VENKATA KESAVA CHOWDARY	GHANTA
-          </td>
-          <td>18485A0512</td>
-          <td>22/12/1999</td>
-        </tr>
-        <tr>
-          <td>65</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738661/CSE-B/cse/65_awublz.jpg"
-            alt="Student Image"></td>
-          <td>KUNAPAREDDY PAVAN KUMAR			
-          </td>
-          <td>18485A0513</td>
-          <td>07/10/1999</td>
-        </tr>
-        <tr>
-          <td>66</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738824/CSE-B/cse/66_pcmdpg.jpg"
-            alt="Student Image"></td>
-          <td>MADEM SUNILSURENDRA				
-          </td>
-          <td>18485A0514</td>
-          <td>16/07/2000</td>
-        </tr>
-        <tr>
-          <td>67</td>
-          <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738996/CSE-B/cse/67_z5rse9.jpg"
-            alt="Student Image"></td>
-          <td>LAXMAN PALLIE				
-          </td>
-          <td>18485A0515</td>
-          <td>24/05/2000</td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+    function resetTimer() {
+      // Clear the existing timeout
+      clearTimeout(timeoutID);
+
+      // Start a new timeout for 3 minutes
+      timeoutID = setTimeout(logout, 1 * 60 * 1000); // 1 minutes = 1 * 60 seconds * 1000 milliseconds
+    }
+
+    function logout() {
+      // Redirect the user to the login page
+      window.location.href = "index.html";
+    }
+
+    $(document).ready(function () {
+      // Reset the timer when the user interacts with the page
+      $(document).on("mousemove keydown click", resetTimer);
+
+      // Start the initial timer
+      resetTimer();
+    });
+  </script>
+</head>
+
+
+<h1>CSE-B 2017-2021</h1>
+
+<button onclick="logout()" style="display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF0099;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#CC0033';"
+  onmouseout="this.style.backgroundColor='#FF0099';"> Log Out</button>
+
+
+
+<table id="student-table">
+  <thead>
+    <tr>
+      <th class="sortable">S.NO</th>
+      <th class="sortable">Image</th>
+      <th class="sortable">Name</th>
+      <th class="sortable">Roll Number</th>
+      <th class="sortable">DOB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730392/CSE-B/cse/1_nfukl9.jpg"
+          alt="Student Image" />
+      </td>
+      <td>GUNJI VAMSI KRISHNA</td>
+      <td>17481A0556</td>
+      <td>14/07/2000</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/2_p8xdv5.jpg"
+          alt="Student Image" />
+      </td>
+      <td>SRAVYA GUNTAKANI</td>
+      <td>17481A0557</td>
+      <td>13/11/1999</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676733135/CSE-B/58_qqrphq.jpg"
+          alt="Student Image" />
+      </td>
+      <td>GOPI KRISHNA GUNTURU</td>
+      <td>17481A0558</td>
+      <td>06/05/2000</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676733135/CSE-B/59_kvghul.jpg"
+          alt="Student Image" />
+      </td>
+      <td>HASEENA NOORI</td>
+      <td>17481A0559</td>
+      <td>02/09/1999</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/5_db9ktm.jpg"
+          alt="Student Image" />
+      </td>
+      <td>MAHESH BABU JAGARLAMUDI</td>
+      <td>17481A0560</td>
+      <td>21/10/1999</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/6_tgv1z4.jpg"
+          alt="Student Image" />
+      </td>
+      <td>JYOTHSNA NAVYASRI JAGATHAPURAO
+      </td>
+      <td>17481A0561</td>
+      <td>04/06/1999</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>
+        <img src="https://res.cloudinary.com/kakani7/image/upload/v1676730393/CSE-B/cse/7_kmkxfa.jpg"
+          alt="Student Image" />
+      </td>
+      <td>SOWMYA JALLURI
+      </td>
+      <td>17481A0562</td>
+      <td>13/09/2000</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730392/CSE-B/cse/8_bqvpqg.jpg"
+          alt="Student Image"></td>
+      <td>JONNALAGADDA MADHU SUDHANA RAO </td>
+      <td>17481A0563</td>
+      <td>31/10/1999</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730510/CSE-B/cse/c_hrpuxm.jpg"
+          alt="Student Image"></td>
+      <td>JUJJURI CHANDRASEKHARACHARI
+      </td>
+      <td>17481A0564</td>
+      <td>18/12/1999</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676739148/CSE-B/cse/10_ahodgd.jpg"
+          alt="Student Image"></td>
+      <td>JUVVANAPUDI NAVA PRAHARSHA
+      </td>
+      <td>17481A0565</td>
+      <td>07/08/2000</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676739237/CSE-B/cse/11_a6vfve.jpg"
+          alt="Student Image"></td>
+      <td>KAKANI MOHITH KRISHNA SAI
+      </td>
+      <td>17481A0566</td>
+      <td>20/06/1999</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730608/CSE-B/cse/12_csej3x.jpg"
+          alt="Student Image"></td>
+      <td>PRAGNA KAKANI
+      </td>
+      <td>17481A0567</td>
+      <td>02/12/1999</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676730825/CSE-B/cse/13_yvvg93.jpg"
+          alt="Student Image"></td>
+      <td>SAI PRIYA KALAKOTA
+      </td>
+      <td>17481A0568</td>
+      <td>15/06/2000</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731114/CSE-B/cse/14_raed8u.jpg"
+          alt="Student Image"></td>
+      <td>KALATHOTI SUVARNA DIVYA SHEELA
+      </td>
+      <td>17481A0569</td>
+      <td>10/11/1999</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731293/CSE-B/cse/15_bxijup.jpg"
+          alt="Student Image"></td>
+      <td>KALLEPALLI MANOGNA </td>
+      <td>17481A0570</td>
+      <td>05/07/2000</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731417/CSE-B/cse/16_vh9ejb.jpg"
+          alt="Student Image"></td>
+      <td>THRINADH KALVA
+      </td>
+      <td>17481A0571</td>
+      <td>26/01/1999</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731648/CSE-B/cse/17_jb0c42.jpg"
+          alt="Student Image"></td>
+      <td>SUJAY KANAPARTHI
+      </td>
+      <td>17481A0572</td>
+      <td>20/05/1999</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676731876/CSE-B/cse/18_eh6spq.jpg"
+          alt="Student Image"></td>
+      <td>JAI VENKAT KANCHARLA
+      </td>
+      <td>17481A0573</td>
+      <td>25/04/2000</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732025/CSE-B/cse/19_kxlon8.jpg"
+          alt="Student Image"></td>
+      <td>JSRAVANI DEVI KANDULA</td>
+      <td>17481A0574</td>
+      <td>11/10/1999</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732240/CSE-B/cse/20_ffazmc.jpg"
+          alt="Student Image"></td>
+      <td>VAMSI KRISHNA KASINENI</td>
+      <td>17481A0575</td>
+      <td>23/08/2000</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732404/CSE-B/cse/21_i9exxg.jpg"
+          alt="Student Image"></td>
+      <td>HEMANTH KATTA</td>
+      <td>17481A0576</td>
+      <td>05/07/2000</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732486/CSE-B/cse/22_zqqybs.jpg"
+          alt="Student Image"></td>
+      <td>NAGA RAJU KATTA</td>
+      <td>17481A0577</td>
+      <td>10/10/2000</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676732614/CSE-B/cse/23_nzmb9l.jpg"
+          alt="Student Image"></td>
+      <td>KATTUPALLI JESSY
+      </td>
+      <td>17481A0578</td>
+      <td>19/09/2000</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733138/CSE-B/79_eqy2ot.jpg"
+          alt="Student Image"></td>
+      <td>KHATEEJA</td>
+      <td>17481A0579</td>
+      <td>22/11/1999</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733138/CSE-B/80_cz77zr.jpg"
+          alt="Student Image"></td>
+      <td>LIKHITH KODALI</td>
+      <td>17481A0580</td>
+      <td>31/05/2000</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733443/CSE-B/cse/26_u8mjm4.jpg"
+          alt="Student Image"></td>
+      <td>VIJAYABHARGAVI KODALI</td>
+      <td>17481A0581</td>
+      <td>31/03/2000</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733607/CSE-B/cse/27_kanou5.jpg"
+          alt="Student Image"></td>
+      <td>KODE SAI GAYATHRI</td>
+      <td>17481A0582</td>
+      <td>31/05/1999</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733765/CSE-B/cse/28_pbc5dn.jpg"
+          alt="Student Image"></td>
+      <td>KOKKILIGADDA MONIKA KEERTHANA KEERTHANA</td>
+      <td>17481A0583</td>
+      <td>02/12/1999</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733896/CSE-B/cse/29_fa8dox.jpg"
+          alt="Student Image"></td>
+      <td>VENKATESH KOLLA</td>
+      <td>17481A0584</td>
+      <td>12/03/1999</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734023/CSE-B/cse/30_kpfwbh.jpg"
+          alt="Student Image"></td>
+      <td>KOLLIPARA DHYANESH</td>
+      <td>17481A0585</td>
+      <td>30/06/1999</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734128/CSE-B/cse/31_csiypt.jpg"
+          alt="Student Image"></td>
+      <td>KOLLIPARA JHANSI LAKSHMI </td>
+      <td>17481A0586</td>
+      <td>27/11/1999</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734217/CSE-B/cse/32_hhquhm.jpg"
+          alt="Student Image"></td>
+      <td>KOLLU KIRANMAYEE</td>
+      <td>17481A0587</td>
+      <td>13/06/1999</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734319/CSE-B/cse/33_lln78z.jpg"
+          alt="Student Image"></td>
+      <td>LAKSHMI SUPRAJA KONAKANCHI
+      </td>
+      <td>17481A0588</td>
+      <td>24/06/2000</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734355/CSE-B/cse/34_vhof6i.jpg"
+          alt="Student Image"></td>
+      <td>ANJANEYA SAI PHANI KONDAPALLI</td>
+      <td>17481A0589</td>
+      <td>16/11/1999</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734487/CSE-B/cse/35_qt8vfy.jpg"
+          alt="Student Image"></td>
+      <td>HARISH KUMAR KONDAPALLI
+      </td>
+      <td>17481A0590</td>
+      <td>08/05/2000</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734687/CSE-B/cse/36_nuupjc.jpg"
+          alt="Student Image"></td>
+      <td>KONDAPALLI PAVAN KUMAR </td>
+      <td>17481A0591</td>
+      <td>03/03/1999</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734762/CSE-B/cse/37_xjapjt.jpg"
+          alt="Student Image"></td>
+      <td>TEJA PRAVEEN KUMAR KONDAVEETI
+      </td>
+      <td>17481A0592</td>
+      <td>01/05/2000</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676734874/CSE-B/cse/38_qn9h8s.jpg"
+          alt="Student Image"></td>
+      <td>ALEKHYA KONDETI
+      </td>
+      <td>17481A0593</td>
+      <td>03/12/1999</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735026/CSE-B/cse/39_vmmwcd.jpg"
+          alt="Student Image"></td>
+      <td>KONDRATHI SURESH
+      </td>
+      <td>17481A0594</td>
+      <td>06/09/1999</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735250/CSE-B/cse/40_kmy7wg.jpg"
+          alt="Student Image"></td>
+      <td>KOTA RENCY
+      </td>
+      <td>17481A0595</td>
+      <td>23/10/1999</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735374/CSE-B/cse/41_bxyvkn.jpg"
+          alt="Student Image"></td>
+      <td> KOTHA USHANVITHA
+      </td>
+      <td>17481A0596</td>
+      <td>05/05/2000</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733141/CSE-B/97_kgdtbs.jpg"
+          alt="Student Image"></td>
+      <td>KOTHAGUNDU AMRUTHA REKHA KOTHAGUNDU
+      </td>
+      <td>17481A0597</td>
+      <td>29/10/1999</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735467/CSE-B/cse/43_kbbywp.png"
+          alt="Student Image"></td>
+      <td>KUCHIPUDI ANUSHA
+      </td>
+      <td>17481A0598</td>
+      <td>28/05/1999</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735646/CSE-B/cse/44_hhavdc.jpg"
+          alt="Student Image"></td>
+      <td>KUCHIPUDI SATYA BHAVANA
+      </td>
+      <td>17481A0599</td>
+      <td>20/07/2000</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735714/CSE-B/cse/45_rt6k7x.jpg"
+          alt="Student Image"></td>
+      <td>SRAVANI KUMPATI
+      </td>
+      <td>17481A05A0</td>
+      <td>23/05/2000</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676735949/CSE-B/cse/46_fyoy0c.jpg"
+          alt="Student Image"></td>
+      <td>VAMSIBABU MADDALA
+      </td>
+      <td>17481A05A1</td>
+      <td>20/08/1998</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736051/CSE-B/cse/47_uffqal.jpg"
+          alt="Student Image"></td>
+      <td>PRATHIBHA MADDU
+      </td>
+      <td>17481A05A2</td>
+      <td>20/03/2000</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736214/CSE-B/cse/48_x7mpea.jpg"
+          alt="Student Image"></td>
+      <td>MALLINENI PRIYANKA MALLINENI
+      </td>
+      <td>17481A05A3</td>
+      <td>19/09/1999</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736413/CSE-B/cse/49_qjucuc.jpg"
+          alt="Student Image"></td>
+      <td>MANDAPATI HEMA
+      </td>
+      <td>17481A05A4</td>
+      <td>31/10/1999</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733142/CSE-B/A5_qhlzir.jpg"
+          alt="Student Image"></td>
+      <td>MARNI THARUN KISHORE
+      </td>
+      <td>17481A05A5</td>
+      <td>07/08/2000</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736617/CSE-B/cse/51_iu7xhm.jpg"
+          alt="Student Image"></td>
+      <td>MARRI BHUVANESWARI
+      </td>
+      <td>17481A05A6</td>
+      <td>23/04/1999</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736709/CSE-B/cse/52_xamt6h.jpg"
+          alt="Student Image"></td>
+      <td>MATLAPUDI JAYA ABHIGNA
+      </td>
+      <td>17481A05A7</td>
+      <td>23/05/2000</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736839/CSE-B/cse/53_hwiwru.jpg"
+          alt="Student Image"></td>
+      <td>MATTA PRATHYUSHA
+      </td>
+      <td>17481A05A8</td>
+      <td>21/09/1999</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676736943/CSE-B/cse/54_ziljrg.jpg"
+          alt="Student Image"></td>
+      <td>MAYA LEELAVATHI
+      </td>
+      <td>17481A05A9</td>
+      <td>05/08/1999</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737031/CSE-B/cse/55_s8eibl.jpg"
+          alt="Student Image"></td>
+      <td>MEDEPALLI KAMAL JOSTNA
+      </td>
+      <td>17481A05B0</td>
+      <td>29/03/2000</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737216/CSE-B/cse/56_yrh14w.jpg"
+          alt="Student Image"></td>
+      <td>MEDIKONDA RAMYA
+      </td>
+      <td>17481A05B1</td>
+      <td>03/01/2000</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737277/CSE-B/cse/57_wokoe4.jpg"
+          alt="Student Image"></td>
+      <td>MENDA ANUSHA
+      </td>
+      <td>17481A05B2</td>
+      <td>14/10/1999</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737460/CSE-B/cse/58_vjumrc.jpg"
+          alt="Student Image"></td>
+      <td>SURYA SHARMA
+      </td>
+      <td>17481A05B3</td>
+      <td>01/07/2000</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676737519/CSE-B/cse/59_feil8u.jpg"
+          alt="Student Image"></td>
+      <td>METHUKUMILLI DALI NAGA SRI SAI
+      </td>
+      <td>17481A05B4</td>
+      <td>18/02/2000</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738050/CSE-B/cse/60_l4k79t.jpg"
+          alt="Student Image"></td>
+      <td>SAKHAVATH ALI MIRZA
+      </td>
+      <td>17481A05B5</td>
+      <td>14/06/2000</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738141/CSE-B/cse/61_mjllaz.jpg"
+          alt="Student Image"></td>
+      <td>ASHA HAZRA MOHAMMAD
+      </td>
+      <td>17481A05B6</td>
+      <td>31/03/2001</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676733143/CSE-B/LE10_ose72i.jpg"
+          alt="Student Image"></td>
+      <td>AALLA ALEKHYA
+      </td>
+      <td>18485A0510 </td>
+      <td>11/03/2000</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738423/CSE-B/cse/63_ljgab3.jpg"
+          alt="Student Image"></td>
+      <td>CHANDANA NAVEEN
+      </td>
+      <td>18485A0511</td>
+      <td>27/12/1999</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738592/CSE-B/cse/64_i0edu2.jpg"
+          alt="Student Image"></td>
+      <td>VENKATA KESAVA CHOWDARY GHANTA
+      </td>
+      <td>18485A0512</td>
+      <td>22/12/1999</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738661/CSE-B/cse/65_awublz.jpg"
+          alt="Student Image"></td>
+      <td>KUNAPAREDDY PAVAN KUMAR
+      </td>
+      <td>18485A0513</td>
+      <td>07/10/1999</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738824/CSE-B/cse/66_pcmdpg.jpg"
+          alt="Student Image"></td>
+      <td>MADEM SUNILSURENDRA
+      </td>
+      <td>18485A0514</td>
+      <td>16/07/2000</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td><img src="https://res.cloudinary.com/kakani7/image/upload/v1676738996/CSE-B/cse/67_z5rse9.jpg"
+          alt="Student Image"></td>
+      <td>LAXMAN PALLIE
+      </td>
+      <td>18485A0515</td>
+      <td>24/05/2000</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+
 </html>
